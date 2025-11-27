@@ -1,0 +1,10 @@
+<div class="component-box onpush-strategy">
+  <h3>OnPush Change Detection Strategy</h3>
+  <p><strong>Strategy:</strong> OnPush (CheckOnce)</p>
+  <p><strong>Input Data:</strong> {{ data }}</p>
+  <p><strong>Input Counter:</strong> {{ counter }}</p>
+  <p><strong>Internal Counter:</strong> {{ internalCounter }}</p>
+  <p><strong>Last Checked:</strong> {{ lastChecked | date:'HH:mm:ss.SSS' }}</p>
+  <button (click)="incrementInternal()">Increment Internal Counter</button>
+  <p class="note">ℹ️ This component is checked ONLY when inputs change or markForCheck() is called</p>
+</div>

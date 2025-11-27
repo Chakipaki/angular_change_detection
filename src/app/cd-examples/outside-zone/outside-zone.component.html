@@ -1,0 +1,46 @@
+<div class="example-box">
+  <h3>Outside Angular Zone Examples</h3>
+  <p class="strategy">Demonstrates runOutsideAngular() and manual CD</p>
+
+  <div class="example">
+    <h4>1. Inside Zone - Auto CD</h4>
+    <p>Counter: {{ insideZoneCounter }}</p>
+    <button (click)="incrementInsideZone()">Increment (Inside Zone)</button>
+    <p class="note">✅ Normal behavior - CD runs automatically</p>
+  </div>
+
+  <div class="example">
+    <h4>2. Outside Zone - No CD</h4>
+    <p>Counter: {{ outsideZoneCounter }}</p>
+    <button (click)="incrementOutsideZone()">Increment (Outside Zone)</button>
+    <p class="note">❌ No CD - UI won't update</p>
+  </div>
+
+  <div class="example">
+    <h4>3. Outside Zone + Manual CD</h4>
+    <p>Counter: {{ outsideZoneWithManualCounter }}</p>
+    <button (click)="incrementOutsideZoneWithManual()">Increment (Manual CD)</button>
+    <p class="note">✅ Manual CD - UI updates</p>
+  </div>
+
+  <div class="example">
+    <h4>4. Performance: Animation Loop</h4>
+    <p>Frame Counter: {{ animationFrameCounter }}</p>
+    <button (click)="startAnimation()">
+      {{ animationId ? 'Stop' : 'Start' }} Animation
+    </button>
+    <p class="note">⚡ Animation outside zone, CD every 10 frames</p>
+  </div>
+
+  <div class="example">
+    <h4>5. Heavy Computation</h4>
+    <button (click)="heavyComputation()">Run Heavy Computation</button>
+    <p class="note">⚡ Computation outside zone, CD after completion</p>
+  </div>
+
+  <div class="example">
+    <h4>6. Full App CD (ApplicationRef.tick)</h4>
+    <button (click)="triggerFullAppCD()">Trigger Full App CD</button>
+    <p class="note">🔄 Triggers CD for entire application</p>
+  </div>
+</div>

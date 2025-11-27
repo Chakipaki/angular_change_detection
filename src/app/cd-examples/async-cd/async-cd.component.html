@@ -1,0 +1,40 @@
+<div class="example-box">
+  <h3>Async Operations & Change Detection</h3>
+  <p class="strategy">Strategy: Default (Zone.js auto-triggers CD)</p>
+
+  <div class="example">
+    <h4>1. setTimeout() - Auto CD</h4>
+    <p>Counter: {{ setTimeoutCounter }}</p>
+    <button (click)="startSetTimeout()">Start setTimeout (1s delay)</button>
+    <p class="note">✅ Zone.js patches setTimeout → Auto CD</p>
+  </div>
+
+  <div class="example">
+    <h4>2. setInterval() - Auto CD</h4>
+    <p>Counter: {{ setIntervalCounter }}</p>
+    <button (click)="startSetInterval()">
+      {{ intervalId ? 'Stop' : 'Start' }} setInterval (1s)
+    </button>
+    <p class="note">✅ Zone.js patches setInterval → Auto CD every second</p>
+  </div>
+
+  <div class="example">
+    <h4>3. Promise - Auto CD</h4>
+    <p>Counter: {{ promiseCounter }}</p>
+    <button (click)="startPromise()">Start Promise</button>
+    <p class="note">✅ Zone.js patches Promise → Auto CD</p>
+  </div>
+
+  <div class="example">
+    <h4>4. async/await - Auto CD</h4>
+    <p>Counter: {{ asyncCounter }}</p>
+    <button (click)="startAsync()">Start async/await (1s delay)</button>
+    <p class="note">✅ Zone.js patches async/await → Auto CD</p>
+  </div>
+
+  <div class="example">
+    <h4>5. Multiple Async Operations</h4>
+    <button (click)="startMultipleAsync()">Start Multiple Async</button>
+    <p class="note">All async operations trigger CD automatically</p>
+  </div>
+</div>

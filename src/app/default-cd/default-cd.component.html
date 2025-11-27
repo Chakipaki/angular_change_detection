@@ -1,0 +1,10 @@
+<div class="component-box default-strategy">
+  <h3>Default Change Detection Strategy</h3>
+  <p><strong>Strategy:</strong> Default (CheckAlways)</p>
+  <p><strong>Input Data:</strong> {{ data }}</p>
+  <p><strong>Input Counter:</strong> {{ counter }}</p>
+  <p><strong>Internal Counter:</strong> {{ internalCounter }}</p>
+  <p><strong>Last Checked:</strong> {{ lastChecked | date:'HH:mm:ss.SSS' }}</p>
+  <button (click)="incrementInternal()">Increment Internal Counter</button>
+  <p class="note">ℹ️ This component is checked on EVERY change detection cycle</p>
+</div>

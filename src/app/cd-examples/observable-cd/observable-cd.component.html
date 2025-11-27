@@ -1,0 +1,31 @@
+<div class="example-box">
+  <h3>Observables & Change Detection</h3>
+  <p class="strategy">Demonstrates AsyncPipe vs Manual Subscription</p>
+
+  <div class="example">
+    <h4>1. Observable with AsyncPipe - Auto CD</h4>
+    <p>Value: {{ dataWithAsyncPipe$ | async }}</p>
+    <button (click)="updateWithAsyncPipe()">Update Observable</button>
+    <p class="note">✅ AsyncPipe automatically triggers CD</p>
+  </div>
+
+  <div class="example">
+    <h4>2. Observable without AsyncPipe - Manual CD</h4>
+    <p>Value: {{ dataWithoutAsyncPipeValue }}</p>
+    <button (click)="updateWithoutAsyncPipe()">Update Observable</button>
+    <p class="note">⚠️ Manual CD required in subscription</p>
+  </div>
+
+  <div class="example">
+    <h4>3. Interval Observable with AsyncPipe</h4>
+    <p>Value: {{ interval$ | async }}</p>
+    <p class="note">✅ Auto-updates every second with AsyncPipe</p>
+  </div>
+
+  <div class="example">
+    <h4>4. OnPush Strategy with Observable</h4>
+    <p>Value: {{ onPushData$ | async }}</p>
+    <button (click)="updateOnPush()">Update OnPush Observable</button>
+    <p class="note">✅ AsyncPipe works with OnPush strategy</p>
+  </div>
+</div>

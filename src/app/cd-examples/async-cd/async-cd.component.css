@@ -1,0 +1,57 @@
+.example-box {
+  border: 2px solid #7b1fa2;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #f3e5f5;
+}
+
+.example-box h3 {
+  color: #7b1fa2;
+  margin-top: 0;
+}
+
+.strategy {
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.example {
+  background-color: white;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 4px;
+  border-left: 4px solid #7b1fa2;
+}
+
+.example h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+.note {
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #7b1fa2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #6a1b9a;
+}
+

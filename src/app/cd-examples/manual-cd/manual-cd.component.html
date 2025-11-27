@@ -1,0 +1,34 @@
+<div class="example-box">
+  <h3>Manual Change Detection Examples</h3>
+  <p class="strategy">Strategy: OnPush (requires manual triggers)</p>
+
+  <div class="example">
+    <h4>1. detectChanges() - Immediate Update</h4>
+    <p>Counter: {{ counter1 }}</p>
+    <p>Last Update: {{ lastUpdate1 | date:'HH:mm:ss.SSS' }}</p>
+    <button (click)="incrementWithDetectChanges()">Increment (detectChanges)</button>
+    <p class="note">✅ Updates immediately - CD runs right now</p>
+  </div>
+
+  <div class="example">
+    <h4>2. markForCheck() - Deferred Update</h4>
+    <p>Counter: {{ counter2 }}</p>
+    <p>Last Update: {{ lastUpdate2 | date:'HH:mm:ss.SSS' }}</p>
+    <button (click)="incrementWithMarkForCheck()">Increment (markForCheck)</button>
+    <p class="note">⏳ Updates in next CD cycle (after async operation)</p>
+  </div>
+
+  <div class="example">
+    <h4>3. No Manual Trigger - No Update</h4>
+    <p>Counter: {{ counter3 }}</p>
+    <p>Last Update: {{ lastUpdate3 | date:'HH:mm:ss.SSS' }}</p>
+    <button (click)="incrementWithoutTrigger()">Increment (no trigger)</button>
+    <p class="note">❌ Won't update - OnPush doesn't detect internal changes</p>
+  </div>
+
+  <div class="example">
+    <h4>4. Multiple Updates</h4>
+    <button (click)="incrementMultiple()">Increment All by 5</button>
+    <p class="note">Single detectChanges() updates all counters at once</p>
+  </div>
+</div>

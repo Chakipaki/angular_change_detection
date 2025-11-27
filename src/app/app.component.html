@@ -1,0 +1,59 @@
+<div class="container">
+  <h1>Angular Change Detection Examples</h1>
+  <p>Zone.js: Active | AppComponent Change Detection Strategy: Default</p>
+  
+  <div class="content">
+    <!-- Strategy Comparison Examples -->
+    <div class="section">
+      <h2>1. Change Detection Strategies</h2>
+      <div class="components">
+        <app-default-cd
+          [data]="data" 
+          [counter]="counter">
+        </app-default-cd>
+
+        <app-onpush-cd 
+          [data]="data" 
+          [counter]="counter">
+        </app-onpush-cd>
+      </div>
+    </div>
+
+    <!-- Manual Change Detection Examples -->
+    <div class="section">
+      <h2>2. Manual Change Detection</h2>
+      <app-manual-cd></app-manual-cd>
+    </div>
+
+    <!-- Async Operations Examples -->
+    <div class="section">
+      <h2>3. Async Operations & Zone.js</h2>
+      <app-async-cd></app-async-cd>
+    </div>
+
+    <!-- Outside Zone Examples -->
+    <div class="section">
+      <h2>4. Running Outside Angular Zone</h2>
+      <app-outside-zone></app-outside-zone>
+    </div>
+
+    <!-- Observable Examples -->
+    <div class="section">
+      <h2>5. Observables & Change Detection</h2>
+      <app-observable-cd></app-observable-cd>
+    </div>
+
+    <!-- Debug Controls -->
+    <div class="section">
+      <h2>Debug Controls</h2>
+      <div class="controls">
+        <p>Counter: {{ counter }}</p>
+        <p>Data: {{ data }}</p>
+        <button (click)="increment()">Increment Counter</button>
+        <button (click)="updateData()">Update Data</button>
+        <p class="debug">CD Count: {{ checkCD() }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
